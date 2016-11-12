@@ -3,7 +3,15 @@
 const ruleHelpers = require('./lib/rule-helpers');
 const htmlHelpers = require('./lib/html-helpers');
 
-let plugin = {
+interface IPmpPlugin {
+    name:                   string;
+    description:            string;
+    ruleHelperObjectName:   string;
+    ruleHelpers:            any;
+    htmlHelpers:            any;
+}
+
+let plugin:IPmpPlugin = {
     name: 'Staple helpers plugin',
     description: `Basic helpers for getting started with Pimp My Page projects
         - inject main stylesheet
@@ -11,8 +19,7 @@ let plugin = {
         - inject HTML partials
         - lorem ipsum custom HTML tag
         - random image generator custom HTML tag`,
-    documentation: 'TODO link some markdown doc',
-    rootRuleHelperObjectName: 'pmpBasic',
+    ruleHelperObjectName: 'pmpBasic',
     ruleHelpers: ruleHelpers,
     htmlHelpers: htmlHelpers
 };
