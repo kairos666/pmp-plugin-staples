@@ -21,5 +21,8 @@
     "url": "https://github.com/kairos666/pmp-plugin-staples/issues"
   },
   "homepage": "https://github.com/kairos666/pmp-plugin-staples#readme",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^6.0.46"
+  }
 }

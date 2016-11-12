@@ -12,6 +12,7 @@ let plugin = {
         - lorem ipsum custom HTML tag
         - random image generator custom HTML tag`,
     documentation: 'TODO link some markdown doc',
+    rootRuleHelperObjectName: 'pmpBasic',
     ruleHelpers: ruleHelpers,
     htmlHelpers: htmlHelpers
 };
