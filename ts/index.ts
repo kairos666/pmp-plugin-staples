@@ -12,7 +12,7 @@ interface IPmpPlugin {
 }
 
 let plugin:IPmpPlugin = {
-    name: 'Staple helpers plugin',
+    name: 'staple helpers plugin',
     description: `Basic helpers for getting started with Pimp My Page projects
         - inject main stylesheet
         - inject main JS script
