@@ -19,7 +19,7 @@ let plugin:IPmpPlugin = {
         - inject HTML partials
         - lorem ipsum custom HTML tag
         - random image generator custom HTML tag`,
-    ruleHelperObjectName: 'pmpBasic',
+    ruleHelperObjectName: 'pmpHelpers',
     ruleHelpers: ruleHelpers,
     htmlHelpers: htmlHelpers
 };
