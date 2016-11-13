@@ -1,6 +1,8 @@
 var mainStylesheetPath = '/css/main.min.css';
 var mainScriptPath = '/js/main.min.js';
 var noInitError = 'Need to init the plugin before usage';
+var fs = require('fs');
+var path = require('path');
 var $;
 var init = function (jQuery) {
     $ = jQuery;
@@ -23,9 +25,20 @@ var baseInjects = function () {
     injectStylesheet();
     injectScript();
 };
+var htmlPartial = function (url) {
+    try {
+        return fs.readFileSync(path.join('./dist/html', url), 'utf8');
+    }
+    catch (err) {
+        if (err.code !== 'ENOENT')
+            throw err;
+        return '<p class="alert alert-warning">HTML inject file not found: ' + url + '</p>';
+    }
+};
 module.exports = {
     init: init,
     injectStylesheet: injectStylesheet,
     injectScript: injectScript,
-    baseInjects: baseInjects
+    baseInjects: baseInjects,
+    htmlPartial: htmlPartial
 };

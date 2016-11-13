@@ -1,6 +1,8 @@
 const mainStylesheetPath        = '/css/main.min.css';
 const mainScriptPath            = '/js/main.min.js';
 const noInitError               = 'Need to init the plugin before usage';
+const fs                        = require('fs');
+const path                      = require('path');
 
 // declare cheerio's Jquery light version
 let $;
@@ -52,9 +54,27 @@ let baseInjects = () => {
     injectScript();
 };
 
+/**
+ * get HTML partial content (string)
+ *
+ * @param url HTML file path
+ */
+let htmlPartial = function(url){
+    try {
+        return fs.readFileSync(path.join('./dist/html', url), 'utf8');
+    } catch (err) {
+        // If the type is not missing file, then just throw the error again.
+        if (err.code !== 'ENOENT') throw err;
+
+        // Handle a file-not-found error
+        return '<p class="alert alert-warning">HTML inject file not found: ' + url + '</p>';
+    }
+}
+
 module.exports = {
     init: init,
     injectStylesheet: injectStylesheet,
     injectScript: injectScript,
-    baseInjects: baseInjects
+    baseInjects: baseInjects,
+    htmlPartial: htmlPartial
 }

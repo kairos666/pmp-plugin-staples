@@ -1,8 +1,11 @@
 declare const mainStylesheetPath: string;
 declare const mainScriptPath: string;
 declare const noInitError: string;
+declare const fs: any;
+declare const path: any;
 declare let $: any;
 declare let init: (jQuery: any) => void;
 declare let injectStylesheet: (stylesheetPath?: string, appendSelector?: string) => void;
 declare let injectScript: (scriptPath?: string, appendSelector?: string) => void;
 declare let baseInjects: () => void;
+declare let htmlPartial: (url: any) => any;
