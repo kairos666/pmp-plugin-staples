@@ -32,7 +32,7 @@ var htmlPartial = function (url) {
     catch (err) {
         if (err.code !== 'ENOENT')
             throw err;
-        return '<p class="alert alert-warning">HTML inject file not found: ' + url + '</p>';
+        return '<p class="alert alert-warning">HTML partial inject file not found: ' + url + '</p>';
     }
 };
 module.exports = {

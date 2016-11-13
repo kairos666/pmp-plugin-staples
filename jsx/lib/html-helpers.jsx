@@ -30,7 +30,7 @@ loremText.defaultProps = {
   "count": 1,
   "units": 'paragraphs',
   "sentence-lower-bound": 5,
-  "sentence-upper-bound": 15,
+  "sentence-upper-bound": 12,
   "paragraph-lower-bound": 3,
   "paragraph-upper-bound": 7
 };

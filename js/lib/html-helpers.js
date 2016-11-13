@@ -31,10 +31,10 @@ var loremText = function (_React$Component) {
 
     // extend props
     props = Object.assign({
-      sentenceLowerBound: props.sentence - lower - bound,
-      sentenceUpperBound: props.sentence - upper - bound,
-      paragraphLowerBound: props.paragraph - lower - bound,
-      paragraphUpperBound: props.paragraph - upper - bound,
+      sentenceLowerBound: props['sentence-lower-bound'],
+      sentenceUpperBound: props['sentence-upper-bound'],
+      paragraphLowerBound: props['paragraph-lower-bound'],
+      paragraphUpperBound: props['paragraph-upper-bound'],
       format: 'plain',
       suffix: '<br>'
     }, props);
@@ -60,7 +60,7 @@ loremText.defaultProps = {
   "count": 1,
   "units": 'paragraphs',
   "sentence-lower-bound": 5,
-  "sentence-upper-bound": 15,
+  "sentence-upper-bound": 12,
   "paragraph-lower-bound": 3,
   "paragraph-upper-bound": 7
 };

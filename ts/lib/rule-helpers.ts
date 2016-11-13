@@ -67,7 +67,7 @@ let htmlPartial = function(url){
         if (err.code !== 'ENOENT') throw err;
 
         // Handle a file-not-found error
-        return '<p class="alert alert-warning">HTML inject file not found: ' + url + '</p>';
+        return '<p class="alert alert-warning">HTML partial inject file not found: ' + url + '</p>';
     }
 }
 

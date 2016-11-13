@@ -21,3 +21,11 @@ gulp.task('jsx-compiling', function(){
     .pipe(rename({extension: 'js'}))
     .pipe(gulp.dest('js/'))
 });
+
+gulp.task('watch-compiling', function(){
+    //update typescript
+    gulp.watch('ts/**/*.ts', ['ts-compiling']);
+
+    //update jsx
+    gulp.watch('jsx/**/*.jsx', ['jsx-compiling'])
+});
