@@ -1,4 +1,39 @@
 import React from 'react';
+import loremIpsum from 'lorem-ipsum';
+
+/***************************************************************
+      LOREM IPSUM CONTENT
+***************************************************************/
+const loremText = class LoremText extends React.Component {
+  constructor(props) {
+    // extend props
+    props = Object.assign({
+        sentenceLowerBound: props['sentence-lower-bound'],
+        sentenceUpperBound: props['sentence-upper-bound'],
+        paragraphLowerBound: props['paragraph-lower-bound'],
+        paragraphUpperBound: props['paragraph-upper-bound'],
+        format: 'plain',
+        suffix: '<br>' 
+    }, props);
+    super(props);
+  }
+  
+  render() {    
+    let generatedText = loremIpsum(this.props);
+
+    return (
+      <p>{generatedText}</p>
+    );
+  }
+}
+loremText.defaultProps = {
+  "count": 1,
+  "units": 'paragraphs',
+  "sentence-lower-bound": 5,
+  "sentence-upper-bound": 15,
+  "paragraph-lower-bound": 3,
+  "paragraph-upper-bound": 7
+};
 
 /***************************************************************
       LOREM IPSUM IMAGE HELPER
@@ -23,5 +58,6 @@ loremImage.defaultProps = {
 };
 
 module.exports = {
-  "lorem-image": loremImage
+  "lorem-image": loremImage,
+  "lorem-text": loremText
 };

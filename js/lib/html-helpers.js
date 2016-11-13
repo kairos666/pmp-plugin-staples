@@ -8,6 +8,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _loremIpsum = require('lorem-ipsum');
+
+var _loremIpsum2 = _interopRequireDefault(_loremIpsum);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -17,10 +21,55 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 /***************************************************************
+      LOREM IPSUM CONTENT
+***************************************************************/
+var loremText = function (_React$Component) {
+  _inherits(LoremText, _React$Component);
+
+  function LoremText(props) {
+    _classCallCheck(this, LoremText);
+
+    // extend props
+    props = Object.assign({
+      sentenceLowerBound: props.sentence - lower - bound,
+      sentenceUpperBound: props.sentence - upper - bound,
+      paragraphLowerBound: props.paragraph - lower - bound,
+      paragraphUpperBound: props.paragraph - upper - bound,
+      format: 'plain',
+      suffix: '<br>'
+    }, props);
+    return _possibleConstructorReturn(this, (LoremText.__proto__ || Object.getPrototypeOf(LoremText)).call(this, props));
+  }
+
+  _createClass(LoremText, [{
+    key: 'render',
+    value: function render() {
+      var generatedText = (0, _loremIpsum2.default)(this.props);
+
+      return _react2.default.createElement(
+        'p',
+        null,
+        generatedText
+      );
+    }
+  }]);
+
+  return LoremText;
+}(_react2.default.Component);
+loremText.defaultProps = {
+  "count": 1,
+  "units": 'paragraphs',
+  "sentence-lower-bound": 5,
+  "sentence-upper-bound": 15,
+  "paragraph-lower-bound": 3,
+  "paragraph-upper-bound": 7
+};
+
+/***************************************************************
       LOREM IPSUM IMAGE HELPER
 ***************************************************************/
-var loremImage = function (_React$Component) {
-  _inherits(LoremImage, _React$Component);
+var loremImage = function (_React$Component2) {
+  _inherits(LoremImage, _React$Component2);
 
   function LoremImage(props) {
     _classCallCheck(this, LoremImage);
@@ -46,5 +95,6 @@ loremImage.defaultProps = {
 };
 
 module.exports = {
-  "lorem-image": loremImage
+  "lorem-image": loremImage,
+  "lorem-text": loremText
 };
