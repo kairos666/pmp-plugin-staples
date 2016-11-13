@@ -27,7 +27,6 @@ const loremText = class LoremText extends React.Component {
   }
 }
 loremText.defaultProps = {
-  "count": 1,
   "units": 'paragraphs',
   "sentence-lower-bound": 5,
   "sentence-upper-bound": 12,

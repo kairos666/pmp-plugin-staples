@@ -57,7 +57,6 @@ var loremText = function (_React$Component) {
   return LoremText;
 }(_react2.default.Component);
 loremText.defaultProps = {
-  "count": 1,
   "units": 'paragraphs',
   "sentence-lower-bound": 5,
   "sentence-upper-bound": 12,
