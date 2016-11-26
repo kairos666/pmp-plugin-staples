@@ -1,12 +1,9 @@
 {
   "name": "pmp-plugin-staples",
-  "version": "0.0.1",
-  "description": "Pimp My Page plugin - contains staple helpers",
+  "version": "0.1.0",
+  "description": "Pimp My Page plugin - contains staple helpers (recommanded)",
   "main": "js/index.js",
   "typings": "js/index",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kairos666/pmp-plugin-staples.git"
@@ -15,7 +12,7 @@
     "plugin",
     "pmp"
   ],
-  "author": "Kairos666",
+  "author": "David Maggi <musashi.miyamoto81@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/kairos666/pmp-plugin-staples/issues"
