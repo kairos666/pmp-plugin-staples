@@ -32,5 +32,17 @@
     "gulp-typescript": "^3.1.2",
     "merge2": "^1.0.2",
     "typescript": "^2.0.9"
+  },
+  "documentation": {
+    "jsHelpers":[
+      "helpers.staple.baseInjects()",
+      "helpers.staple.htmlPartial(htmlPartialPath)",
+      "helpers.staple.injectStylesheet(stylesheetPath, selector)",
+      "helpers.staple.injectScript(scriptPath, selector)"
+    ],
+    "htmlHelpers":[
+      "<lorem-image data-img-width=\"integer\" data-img-height=\"integer\" alt=\"string\">",
+      "<lorem-text count=\"integer\" units=\"paragraphs\">"
+    ]
   }
 }
