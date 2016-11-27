@@ -1,5 +1,5 @@
 # pmp-plugin-staples
-Pimp My Page plugin - contains staple helpers 
+Pimp My Page plugin - contains staple helpers (recommended for pmp-engine)
 
 ## JS Helpers
 
