@@ -1,6 +1,6 @@
 {
   "name": "pmp-plugin-staples",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Pimp My Page plugin - contains staple helpers (recommanded)",
   "main": "js/index.js",
   "typings": "js/index",
@@ -41,8 +41,8 @@
       "helpers.staple.injectScript(scriptPath, selector)"
     ],
     "htmlHelpers":[
-      "<lorem-image data-img-width=\"integer\" data-img-height=\"integer\" alt=\"string\">",
-      "<lorem-text count=\"integer\" units=\"paragraphs\">"
+      "<lorem-image data-img-width=\"integer\" data-img-height=\"integer\" alt=\"string\"></lorem-image>",
+      "<lorem-text count=\"integer\" units=\"paragraphs\"></lorem-text>"
     ]
   }
 }
