@@ -20,7 +20,7 @@ Pimp My Page plugin - contains staple helpers (recommended for pmp-engine)
 
 ## HTML Helpers
 
-###random text tag
+### random text tag
 generate &lt;p&gt; tag(s) with lorem ipsum text as content
 ```html
 <!-- default | paragraph varying in length-->
@@ -34,7 +34,7 @@ generate &lt;p&gt; tag(s) with lorem ipsum text as content
 <!-- 2 sentences -->
 <lorem-text count="2" units="sentences"></lorem-text>
 ```
-###random image tag
+### random image tag
 generate an &lt;img&gt; tag with a random image file as source
 ```html
 <!-- default | random image 200x200 -->

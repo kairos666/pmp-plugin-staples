@@ -1,6 +1,6 @@
 {
   "name": "pmp-plugin-staples",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Pimp My Page plugin - contains staple helpers (recommended)",
   "main": "js/index.js",
   "typings": "js/index",
